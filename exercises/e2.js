@@ -8,9 +8,9 @@ export function getNumbersWithSquareRoots(max) {
   for (let i = 0; i < max; i++) {
     numSpread.push(i)
   }
-  numSpread.forEach((num) => {
-    Math.sqrt(num) % 1 === 0 && maxes.push(num);
-  })
+  for (let i = 0; i < numSpread.length; i++) {
+    Math.sqrt(numSpread[i]) % 1 === 0 && maxes.push(numSpread[i]);
+  }
   return maxes;
 }
 

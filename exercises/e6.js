@@ -5,11 +5,11 @@
 
 export function getClientWithNoMoney(array) {
   let clientsWithNoMoney = [];
-  array.forEach(client => {
-    if (client.balance === 0) {
-      clientsWithNoMoney.push(client.name)
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance === 0) {
+      clientsWithNoMoney.push(array[i].name)
     }
-  });
+  }
   return clientsWithNoMoney;
 }
 

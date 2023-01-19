@@ -5,9 +5,9 @@
 
 export function getAverage(array) {
   let average = 0;
-  array.forEach(num => {
-    average = average + num
-  });
+  for (let i = 0; i < array.length; i++) {
+    average = average + array[i]
+  }
   return average / array.length
 }
 

@@ -5,15 +5,15 @@
 
 export function getAllWithdrawals(array) {
   let allWithdrawals = [];
-  array.forEach((client) => {
+  for (let i = 0; i < array.length; i++) {
     let clientWithdrawalTotal = 0;
-    if (client.withdrawals) {
-      for (let i = 0; i < client.withdrawals.length; i++) {
-        clientWithdrawalTotal = clientWithdrawalTotal + client.withdrawals[i];
+    if (array[i].withdrawals) {
+      for (let j = 0; j < array[i].withdrawals.length; j++) {
+        clientWithdrawalTotal = clientWithdrawalTotal + array[i].withdrawals[j];
       }
     }
     allWithdrawals.push(clientWithdrawalTotal);
-  });
+  }
   return allWithdrawals;
 }
 

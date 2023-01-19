@@ -5,21 +5,21 @@
 
 export function findMinValueInArray(array) {
   let minValue = array[0];
-  array.forEach((element) => {
-    if(element < minValue) {
-      minValue = element;
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] < minValue) {
+      minValue = array[i];
     }
-  })
+  }
   return minValue;
 }
 
 export function findMaxValueInArray(array) {
   let maxValue = array[0];
-  array.forEach((element) => {
-    if(element > maxValue) {
-      maxValue = element;
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] > maxValue) {
+      maxValue = array[i];
     }
-  })
+  }
   return maxValue;
 }
 

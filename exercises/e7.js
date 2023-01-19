@@ -5,11 +5,11 @@
 
 export function getClientWithLeastBalance(array) {
   let clientWithLeastBalance = [array[0]];
-  array.forEach((client) => {
-    if (client.balance < clientWithLeastBalance[0].balance && client.balance !== 0) {
-      clientWithLeastBalance.splice(0, 1, client);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance < clientWithLeastBalance[0].balance && array[i].balance !== 0) {
+      clientWithLeastBalance.splice(0, 1, array[i]);
     }
-  });
+  }
   return clientWithLeastBalance;
 }
 

@@ -5,17 +5,14 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // let concatedArrays = arr1;
-  // console.log('concatedArrays before', concatedArrays)
-  // arr2.forEach(element => {
-  //   concatedArrays.push(element)
-  // });
-  // return [concatedArrays]
-  // console.log('concatedArrays after', concatedArrays)
-
-  // !The above should work but doesn't. Not sure what is wrong, please explain. I logged the 'concatedArrays' and I get some really weird behavior, like it isn't being reinitialized after every call. 
-
-  return [...arr1, ...arr2]
+  let concatedArrays = [];
+  for (let i = 0; i < arr1.length; i++) {
+    concatedArrays.push(arr1[i])
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    concatedArrays.push(arr2[i])
+  }
+  return concatedArrays
 }
 
 

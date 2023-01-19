@@ -6,13 +6,13 @@
 
 export function joinToString(array, separator) {
   let joinedString = '';
-  array.forEach(element => {
+  for (let i = 0; i < array.length; i++) {
     if (joinedString === ''){
-      joinedString = element
+      joinedString = array[i]
     } else {
-      joinedString = joinedString + separator + element;
+      joinedString = joinedString + separator + array[i];
     }
-  });
+  }
   return joinedString;
 }
 

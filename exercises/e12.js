@@ -6,15 +6,15 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   let allDepositsGreaterThanOneHundred = [];
-  array.forEach(client => {
-    if (client.deposits) {
-      for (let i = 0; i < client.deposits.length; i++) {
-        if (client.deposits[i] > 100) {
-          allDepositsGreaterThanOneHundred.push(client.deposits[i])
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].deposits) {
+      for (let j = 0; j < array[i].deposits.length; j++) {
+        if (array[i].deposits[j] > 100) {
+          allDepositsGreaterThanOneHundred.push(array[i].deposits[j])
         }
       }
     }
-  });
+  }
   return allDepositsGreaterThanOneHundred;
 }
 

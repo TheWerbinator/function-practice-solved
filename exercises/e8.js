@@ -6,11 +6,11 @@
 
 export function getClientWithGreatestBalance(array) {
   let clientWithGreatestBalance = [array[0]];
-  array.forEach(client => {
-    if (client.balance > clientWithGreatestBalance[0].balance) {
-      clientWithGreatestBalance.splice(0, 1, client);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance > clientWithGreatestBalance[0].balance) {
+      clientWithGreatestBalance.splice(0, 1, array[i]);
     }
-  });
+  }
   return clientWithGreatestBalance;
 }
 

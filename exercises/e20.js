@@ -7,15 +7,15 @@
 
 export function separateNamesWithAFromRest(array) {
   let separateNamesArray = [[], []];
-  array.forEach(name => {
+  for (let i = 0; i < array.length; i++) {
     let counter = 0;
-    name.split('').forEach((letter) => {
+    array[i].split('').forEach((letter) => {
       if (letter === 'a') {
         counter++
       } 
     })    
-    counter > 0 ? separateNamesArray[0].push(name) : separateNamesArray[1].push(name);
-  });
+    counter > 0 ? separateNamesArray[0].push(array[i]) : separateNamesArray[1].push(array[i]);
+  }
   return separateNamesArray;
 }
 

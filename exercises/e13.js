@@ -6,17 +6,17 @@
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   let allAccountsWithSumsOfDepositsLess2000 = [];
-  array.forEach(client => {
+  for (let i = 0; i < array.length; i++) {
     let sumOfDeposits = 0;
-    if (client.deposits) {
-      for (let i = 0; i < client.deposits.length; i++) {
-        sumOfDeposits += client.deposits[i]
+    if (array[i].deposits) {
+      for (let j = 0; j < array[i].deposits.length; j++) {
+        sumOfDeposits += array[i].deposits[j]
       }
     }
     if (sumOfDeposits < 2000) {
-      allAccountsWithSumsOfDepositsLess2000.push(client)
+      allAccountsWithSumsOfDepositsLess2000.push(array[i])
     }
-  });
+  }
   return allAccountsWithSumsOfDepositsLess2000;
 }
 

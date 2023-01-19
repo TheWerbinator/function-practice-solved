@@ -7,11 +7,11 @@
 
 export function doesArrayInclude(array, value) {
   let theArrayIncludes = false;
-  array.forEach(element => {
-    if (element === value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
       theArrayIncludes = true;
     }
-  });
+  }
   return theArrayIncludes;
 }
 

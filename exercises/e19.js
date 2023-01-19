@@ -6,9 +6,9 @@
 
 export function reverseArray(array) {
   let reversedArray = new Array(array.length - 1);
-  array.forEach((element, index) => {
-    reversedArray.splice(((array.length - 1) - index), 1, element)
-  });
+  for (let i = 0; i < array.length; i++) {
+    reversedArray.splice(((array.length - 1) - i), 1, array[i])
+  }
   return reversedArray;
 }
 

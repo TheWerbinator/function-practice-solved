@@ -7,15 +7,15 @@
 
 export function flatArrays(array) {
   let flattenedArray = [];
-  array.forEach(element => {
-    if (element.length === 1) {
-      flattenedArray.push(element)
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length === 1) {
+      flattenedArray.push(array[i])
     } else {
-      for (let i = 0; i < element.length; i++) {
-        flattenedArray.push(element[i])
+      for (let j = 0; j < array[i].length; j++) {
+        flattenedArray.push(array[i][j])
       }
     }
-  });
+  }
   return flattenedArray;
 }
 

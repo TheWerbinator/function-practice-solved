@@ -6,11 +6,11 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   let clientsWithBalanceOverOneHundred = [];
-  array.forEach(client => {
-    if(client.balance > 100) {
-      clientsWithBalanceOverOneHundred.push(client)
+  for (let i = 0; i < array.length; i++) {
+    if(array[i].balance > 100) {
+      clientsWithBalanceOverOneHundred.push(array[i])
     }
-  });
+  }
   return clientsWithBalanceOverOneHundred;
 }
 
